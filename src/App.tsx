@@ -12,11 +12,13 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Routes>
-          <Route path ="/" element={<MainPage/>}/>
-          <Route path="/details" element={<DetailsPage/>}/>
-          <Route path="*" element={<NotFound/>}/>
-        </Routes>
+        <div className="App">
+          <Routes>
+            <Route path ="/" element={<MainPage/>}/>
+            <Route path="/details" element={<DetailsPage/>}/>
+            <Route path="*" element={<NotFound/>}/>
+          </Routes>
+        </div>
       </Router>
     );
   }
