@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import MovieList from '../components/MovieList';
 import NavigationBar from '../components/NavigationBar';
 import { Movie } from '../models';
@@ -11,6 +11,15 @@ const MainPage:React.FC = () => {
 
     console.log(query);
 
+    useEffect(() => {
+        // fill movies
+        // fetch()
+        //     .then(res => res.json)
+        //     .then(json => setMovies(json))
+
+        movies.forEach(movie => setGenreT(genres => [...genres, ...movie.genres]))
+        setGenreT(genres => genres.filter((item, index) => genreTypes.indexOf(item) === index))
+    }, [])
 
     const filteredMovies = useMemo(() => {
         const search_q:Movie[] = movies.filter( movie => 
