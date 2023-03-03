@@ -11,6 +11,7 @@ const Filter:React.FC<Props> = ({filterQuery, setFilterQ, genreTypes}: Props) =>
 
     return (
     <div className='filter__bar'>
+        Genre 
         <select value={filterQuery} onChange={e => setFilterQ(e.target.value)}>
             <option value="all">All</option>
         { genreTypes.map(g => <option value={g}>{g[0].toUpperCase() + g.slice(1)}</option>) } 
