@@ -26,7 +26,7 @@ const DetailsPage:React.FC = () => {
     return (
     <div>
         <NavigationBar/>
-        <h1>{chosenMovie?.name}</h1>
+        <h1 className='movie__title'>{chosenMovie?.name}</h1>
         <div className='movie__big__img'>
             <img src={process.env.PUBLIC_URL + `movie_images/${chosenMovie?.img}`}
             className='thumbnail__image'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Movie } from '../models';
-import './styles.scss'
+import './mainPage.scss';
 
 interface Props {
     movie: Movie;

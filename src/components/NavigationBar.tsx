@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.scss';
 
 type Props = {
     children?: JSX.Element | JSX.Element[];

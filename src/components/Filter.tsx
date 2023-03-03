@@ -1,4 +1,5 @@
 import React from 'react'
+import './mainPage.scss';
 
 interface Props {
     filterQuery: string;

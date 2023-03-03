@@ -1,7 +1,7 @@
 import React from 'react'
 import { Movie } from '../models';
 import MovieThumbnail from './MovieThumbnail';
-import './styles.scss'
+import './mainPage.scss';
 
 interface Props {
     movies: Movie[];
