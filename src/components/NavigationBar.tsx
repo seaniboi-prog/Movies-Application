@@ -1,24 +1,16 @@
 import React from 'react'
-import Filter from './Filter';
-import Search from './Search'
-import './styles.scss'
 
-interface Props {
-    query: string;
-    setQuery: React.Dispatch<React.SetStateAction<string>>;
-    filterQuery: string;
-    setFilterQ: React.Dispatch<React.SetStateAction<string>>;
-    genreTypes: string[];
+type Props = {
+    children?: JSX.Element | JSX.Element[];
 }
 
-const NavigationBar:React.FC<Props> = ({query, setQuery, filterQuery, setFilterQ, genreTypes} : Props) => {
-    return (
+const NavigationBar:React.FC<Props> = ({children}:Props) => {
+  return (
     <div>
-        <Search query={query} setQuery={setQuery}/>
-        <Filter filterQuery={filterQuery} setFilterQ={setFilterQ} genreTypes={genreTypes}/>
-        Hehe
+      hehe
+      {children}
     </div>
-    )
+  )
 }
 
 export default NavigationBar

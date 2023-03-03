@@ -7,9 +7,18 @@ interface Props {
 }
 
 const MovieThumbnail:React.FC<Props> = ({movie}:Props) => {
-    return (<div className='movie__thumbnail'>
-        {movie.name}
-    </div>
+
+    return (
+    <span className='movie__thumbnail'>
+        <img
+            src={process.env.PUBLIC_URL + `movie_images/${movie.img}`}
+            className='thumbnail__image'
+            alt={movie.key}
+        />
+        <p className='thumbnail__title'>
+            {movie.name}
+        </p>
+    </span>
     );
 }
 

@@ -10,7 +10,8 @@ const Filter:React.FC<Props> = ({filterQuery, setFilterQ, genreTypes}: Props) =>
 
     return (
     <select value={filterQuery} onChange={e => setFilterQ(e.target.value)}>
-       { genreTypes.map(g => <option value={g}>g[0].toUpperCase() + g.slice(1)</option>) } 
+        <option value="all">All</option>
+       { genreTypes.map(g => <option value={g}>{g[0].toUpperCase() + g.slice(1)}</option>) } 
     </select>
     );
 }
