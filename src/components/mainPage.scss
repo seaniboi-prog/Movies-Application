@@ -1,4 +1,18 @@
 .search__bar {
     color: green;
+    background-color: aqua;
     // input {}
+}
+
+.filter__bar {
+    background-color: brown;
+}
+
+.movie__thumbnail {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.movie__list {
+    background-color: lightskyblue;
 }

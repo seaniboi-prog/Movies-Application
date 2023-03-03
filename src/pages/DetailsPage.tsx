@@ -3,9 +3,17 @@ import MovieDetails from '../components/MovieDetails';
 import { Movie } from '../models';
 import jsonObject from '../data/movie.mock-data.json'
 import NavigationBar from '../components/NavigationBar';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AiFillHome } from 'react-icons/ai'
 
 const DetailsPage:React.FC = () => {
     const [movies, setMovies] = useState<Movie[]>([]);
+
+    const navigate = useNavigate();
+
+    const navigateToHome = () => {
+        navigate('/')
+    }
 
     const loadJsonObjectAnother = (): Promise<Movie[]> => {
         const hmm: Movie[] = jsonObject as Movie[];
@@ -19,13 +27,19 @@ const DetailsPage:React.FC = () => {
         });
     }, [])
 
+    const movieId = useLocation().state.id;
+
     const chosenMovie = useMemo(() => {
-        return movies.find(i => i.id === 4);
-    }, [movies]) 
+        return movies.find(i => i.id === movieId);
+    }, [movies, movieId]) 
 
     return (
     <div>
-        <NavigationBar/>
+        <NavigationBar>
+            <span className='home__icon' onClick={() => navigateToHome()}>
+                <AiFillHome/>
+            </span>
+        </NavigationBar>
         <h1 className='movie__title'>{chosenMovie?.name}</h1>
         <div className='movie__big__img'>
             <img src={process.env.PUBLIC_URL + `movie_images/${chosenMovie?.img}`}

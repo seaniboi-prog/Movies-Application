@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {Component} from 'react'
+import { Navigate } from "react-router-dom"
 
-const NotFound:React.FC = () => {
-    return (
-    <div>
-    </div>
-    );
-}
+class NotFound extends Component {
+
+    render() {
+      return <Navigate to="/" />;
+    }
+  }
 
 export default NotFound
