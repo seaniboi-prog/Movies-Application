@@ -22,7 +22,6 @@ const MovieThumbnail:React.FC<Props> = ({movie}:Props) => {
                     src={process.env.PUBLIC_URL + `movie_images/${movie.img}`}
                     alt={movie.key}
                     onClick={() => navigateToDetail()}
-                    width="200px"
                     className='movie__image'
                 />
                 <p className='movie__title'>{movie.name}</p>

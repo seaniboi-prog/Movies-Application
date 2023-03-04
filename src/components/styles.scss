@@ -19,3 +19,12 @@
     font-size: 60px;
     color: white;
 }
+
+$medium_window: 1500px;
+@media (max-width: $medium_window) {
+    .title {
+        top: 1em;
+        left: 1.8em;
+        font-size: 40px;
+    }
+}
