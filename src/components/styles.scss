@@ -20,11 +20,16 @@
     color: white;
 }
 
-$medium_window: 1500px;
-@media (max-width: $medium_window) {
+$small_thresh: 875px;
+$medium_thresh: 1200px;
+$large_thresh: 2000px;
+@media (min-width: $medium_thresh) and (max-width: $large_thresh) {
+    .navigation {
+        height: 6em;
+    }
     .title {
-        top: 1em;
-        left: 1.8em;
+        top: 0.7em;
+        left: 2em;
         font-size: 40px;
     }
 }

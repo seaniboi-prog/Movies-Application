@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 .search__bar {
     position: absolute;
     display: inline-block;
@@ -72,8 +73,10 @@
 
 .movie__box:hover {
     transform: scale(1.3);
-    color: rgb(234, 116, 19);
-    text-shadow: 2px 2px black;
+    .movie__title {
+        color: rgb(234, 116, 19);
+        text-shadow: 2px 2px black;
+    }
 }
 
 .movie__box:active {
@@ -98,6 +101,7 @@
     text-align: center;
     z-index: 100;
     font-weight: bold;
+    font-family: 'Josefin Sans';
 }
 
 $small_thresh: 875px;
@@ -107,6 +111,7 @@ $large_thresh: 2000px;
     .search__bar {
         right: 2em;
         width: 52%;
+        top: 1.2em;
         input {
             width: 45%;
             padding: 10px 20px;
@@ -115,15 +120,13 @@ $large_thresh: 2000px;
     .filter__bar {
         right: 0;
         width: 24%;
+        top: 1.2em;
         select {
             width: 60%;
             padding: 10px 20px;
         }
     }
     .movie__thumbnail {
-        // width: 15%;
-        // padding: 50px;
-        // margin-top: 15px;
         margin-bottom: 20px;
     }
     .movie__box {

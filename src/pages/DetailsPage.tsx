@@ -25,6 +25,11 @@ const DetailsPage:React.FC = () => {
         loadJsonObjectAnother().then(res => {
             setMovies(prev => [...res]);
         });
+
+        document.documentElement.scrollTo({
+            top: 0,
+            left: 0,
+        });
     }, [])
 
     const movieId = useLocation().state.id;
@@ -36,17 +41,21 @@ const DetailsPage:React.FC = () => {
     return (
     <div>
         <NavigationBar>
-            <span className='home__icon' onClick={() => navigateToHome()}>
-                <AiFillHome/>
+            <span className='button__home' onClick={() => navigateToHome()}>
+                <AiFillHome className='home__icon'/>
             </span>
         </NavigationBar>
-        <h1 className='movie__title'>{chosenMovie?.name}</h1>
-        <div className='movie__big__img'>
-            <img src={process.env.PUBLIC_URL + `movie_images/${chosenMovie?.img}`}
-            className='thumbnail__image'
-            alt={chosenMovie?.key}/>
+        <h1 className='movie__big__title'>{chosenMovie?.name}</h1>
+        <div className='details__page'>
+            <div className='movie__big__img'>
+                <img src={process.env.PUBLIC_URL + `movie_images/${chosenMovie?.img}`}
+                className='big__img'
+                alt={chosenMovie?.key}
+                width='250px'
+                />
+            </div>
+            <MovieDetails chosenMovie={chosenMovie}/>
         </div>
-        <MovieDetails chosenMovie={chosenMovie}/>
     </div>
     );
 }
