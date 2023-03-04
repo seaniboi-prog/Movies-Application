@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'motion-font';
+    src: url('../../public/fonts/UchronyCubeBold-MVX1P.ttf');
+}
+
 .navigation {
-    background-color: bisque;
+    background-color: rgb(37, 36, 36);
+    height: 8em;
+    position: sticky;
+    margin-top: 0;
+}
+
+.title {
+    position: absolute;
+    left: 3em;
+    top: 0.5em;
+    display: inline-block;
+    font-family: 'motion-font';
+    font-size: 60px;
+    color: white;
 }

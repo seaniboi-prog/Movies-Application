@@ -8,7 +8,7 @@ type Props = {
 const NavigationBar:React.FC<Props> = ({children}:Props) => {
   return (
     <div className='navigation'>
-      hehe
+      <div className='title'>Movie Display</div>
       {children}
     </div>
   )

@@ -56,7 +56,6 @@ const MainPage:React.FC = () => {
             <Search query={query} setQuery={setQuery}/>
             <Filter filterQuery={filterQuery} setFilterQ={setFilterQ} genreTypes={genreTypes}/>
         </NavigationBar>
-        <br/>
         <MovieList movies={filteredMovies}/>
     </div>
     );
