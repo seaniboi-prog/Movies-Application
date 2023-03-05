@@ -20,9 +20,37 @@
     color: white;
 }
 
+.button__home {
+    background-color: white;
+    cursor: pointer;
+    color: rgb(59, 62, 59);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 2em;
+    left: 5em;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    .home__icon {
+        font-size: 30px;
+    }
+}
+
+.button__home:hover {
+    background-color: rgb(59, 62, 59);
+    color: white;
+}
+
+.button__home:active {
+    transform: scale(0.7);
+}
+
 $small_thresh: 875px;
-$medium_thresh: 1200px;
-$large_thresh: 2000px;
+$medium_thresh: 1250px;
+$large_thresh: 1850px;
 @media (min-width: $medium_thresh) and (max-width: $large_thresh) {
     .navigation {
         height: 6em;
@@ -31,5 +59,14 @@ $large_thresh: 2000px;
         top: 0.7em;
         left: 2em;
         font-size: 40px;
+    }
+    .button__home {
+        width: 40px;
+        height: 40px;
+        top: 1.7em;
+        left: 1.5em;
+        .home__icon {
+            font-size: 23px;
+        }
     }
 }

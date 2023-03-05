@@ -6,7 +6,7 @@
     font-size: 23px;
     right: 2em;
     width: 50%;
-    top: 1.2em;
+    top: 1.5em;
     font-weight: bold;
     text-shadow: 2px 2px black;
     input {
@@ -27,7 +27,7 @@
     right: 1em;
     font-size: 23px;
     width: 15%;
-    top: 1.2em;
+    top: 1.5em;
     font-weight: bold;
     text-shadow: 2px 2px black;
     select {
@@ -106,7 +106,7 @@
 
 $small_thresh: 875px;
 $medium_thresh: 1250px;
-$large_thresh: 1750px;
+$large_thresh: 1850px;
 @media (min-width: $medium_thresh) and (max-width: $large_thresh) {
     .search__bar {
         right: 2em;
