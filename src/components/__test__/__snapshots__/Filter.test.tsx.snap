@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter Component Tests Matches Snapshot 1`] = `
+<div
+  className="filter__bar"
+  data-testid="filter"
+>
+  Genre
+  <select
+    data-testid="filter-select"
+    onChange={[Function]}
+    value="All"
+  >
+    <option
+      data-testid="all-option"
+      value="all"
+    >
+      All
+    </option>
+    <option
+      data-testid="list-option"
+      value="Genre1"
+    >
+      Genre1
+    </option>
+    <option
+      data-testid="list-option"
+      value="Genre2"
+    >
+      Genre2
+    </option>
+    <option
+      data-testid="list-option"
+      value="Genre3"
+    >
+      Genre3
+    </option>
+  </select>
+</div>
+`;

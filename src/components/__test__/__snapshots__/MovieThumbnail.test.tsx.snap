@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie Thumbnail Component Tests Matches Snapshot 1`] = `
+<div
+  className="movie__thumbnail"
+  data-testid="movieThumbnail"
+>
+  <div
+    className="movie__box"
+    data-testid="movieBox"
+    onClick={[Function]}
+  >
+    <img
+      alt="key"
+      className="movie__image"
+      data-testid="movieImage"
+      src="movie_images/img.jpg"
+    />
+    <p
+      className="movie__title"
+      data-testid="movieTitle"
+    >
+      name
+    </p>
+  </div>
+</div>
+`;

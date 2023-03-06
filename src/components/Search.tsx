@@ -9,9 +9,10 @@ interface Props {
 const Search:React.FC<Props> = ({query, setQuery} : Props) => {
 
     return (
-    <div className='search__bar'>
+    <div className='search__bar' data-testid="search">
         Search 
-        <input 
+        <input
+            data-testid="search-input"
             value={query}
             onChange={e => setQuery(e.target.value)}
             type="search"

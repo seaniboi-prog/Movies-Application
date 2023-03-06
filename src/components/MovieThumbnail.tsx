@@ -16,15 +16,15 @@ const MovieThumbnail:React.FC<Props> = ({movie}:Props) => {
     }
 
     return (
-    <div className='movie__thumbnail'>
-            <div className='movie__box'>
+    <div className='movie__thumbnail' data-testid="movieThumbnail">
+            <div className='movie__box' data-testid="movieBox" onClick={() => navigateToDetail()}>
                 <img
                     src={process.env.PUBLIC_URL + `movie_images/${movie.img}`}
                     alt={movie.key}
-                    onClick={() => navigateToDetail()}
                     className='movie__image'
+                    data-testid='movieImage'
                 />
-                <p className='movie__title'>{movie.name}</p>
+                <p className='movie__title' data-testid='movieTitle'>{movie.name}</p>
             </div>
     </div>
     );

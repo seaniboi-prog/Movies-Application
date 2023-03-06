@@ -7,8 +7,8 @@ type Props = {
 
 const NavigationBar:React.FC<Props> = ({children}:Props) => {
   return (
-    <div className='navigation'>
-      <div className='title'>Movie Gallery</div>
+    <div className='navigation' data-testid='navigation'>
+      <div className='title' data-testid='nav-title'>Movie Gallery</div>
       {children}
     </div>
   )

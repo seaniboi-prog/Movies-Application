@@ -69,6 +69,20 @@
     color: chocolate;
 }
 
+.movie__info__rating {
+    margin: 20px;
+    margin-top: 30px;
+    margin-left: 80px;
+    display: flex;
+    transition: 0.5s;
+    color: white;
+}
+
+.movie__info__rating:hover {
+    transform: scale(1.05);
+    color: gold;
+}
+
 #description__line {
     display: inline-block;
 }
