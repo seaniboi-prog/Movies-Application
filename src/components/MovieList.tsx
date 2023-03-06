@@ -9,8 +9,8 @@ interface Props {
 
 const MovieList:React.FC<Props> = ({movies}: Props) => {
     return (
-    <div className='movie__list'>
-        { movies.map(movie => <MovieThumbnail movie={movie}/>) }
+    <div className='movie__list' data-testid="movieList">
+        { movies.map(movie => <MovieThumbnail key={movie.id} movie={movie}/>) }
     </div>
     );
 }

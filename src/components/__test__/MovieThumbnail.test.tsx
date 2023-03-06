@@ -3,10 +3,20 @@
 import MovieThumbnail from '../MovieThumbnail';
 import { Movie } from '../../models';
 
-import { render, cleanup, screen } from '@testing-library/react';
+import { render, cleanup, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
-import * as router from 'react-router'
+import { BrowserRouter } from "react-router-dom";
+
+
+const mockNavigate = jest.fn();
+
+jest.mock("react-router-dom", () => ({
+
+    ...(jest.requireActual("react-router-dom") as any),
+
+    useNavigate: () => mockNavigate
+}));
 
 describe('Movie Thumbnail Component Tests', () => {
 
@@ -21,11 +31,12 @@ describe('Movie Thumbnail Component Tests', () => {
         img: "img.jpg"
     }
 
-    const mockNavigate = jest.fn()
-
     const renderComponent = () => {
-        jest.spyOn(router, 'useNavigate').mockImplementation(() => mockNavigate);
-        render(<MovieThumbnail movie={dummyMovie} />);
+        render(
+        <BrowserRouter>
+            <MovieThumbnail movie={dummyMovie} />
+        </BrowserRouter>
+        );
     }
 
     beforeEach(renderComponent);
@@ -50,9 +61,13 @@ describe('Movie Thumbnail Component Tests', () => {
         expect(titleElement).toHaveTextContent(dummyMovie.name);
     });
 
-    // it("Redirects to Details Page after clicking", () => {
-    //     expect(mockNavigate).toHaveBeenCalledWith('/details');
-    // });
+    it("Redirects to Details Page after clicking", () => {
+        const movieBox:HTMLElement = screen.getByTestId('movieBox');
+        expect(movieBox).toBeInTheDocument();
+        
+        fireEvent.click(movieBox);
+        expect(mockNavigate).toHaveBeenCalledWith('/details', {state: {id: dummyMovie.id}});
+    });
 
     it("Matches Snapshot", () => {
         const tree = renderer.create(<MovieThumbnail movie={dummyMovie}/>).toJSON();

@@ -50,24 +50,22 @@ const MovieDetails:React.FC<Props> = ({ chosenMovie } : Props) => {
     return (
     <div className='movie__info__box' data-testid='infoBox'>
 
-        <div className='movie__info__line'>
+        <div data-testid="infoLine" className='movie__info__line'>
             <p data-testid='infoDesc'>{chosenMovie?.description}</p>
         </div>
 
-        <div className='movie__info__rating'>
-            {/* <AiFillStar className='detail__icon'/> */}
-            {/* <div data-testid='infoRating'>{chosenMovie?.rate}</div> */}
+        <div data-testid="infoLine" className='movie__info__line' id='movie__info_rating'>
             {renderStars(chosenMovie?.rate)}
         </div>
 
-        <div className='movie__info__line'>
+        <div data-testid="infoLine" className='movie__info__line'>
             <MdOutlineAccessTimeFilled className='detail__icon'/>
             <div data-testid='infoLength'>{chosenMovie?.length}</div>
         </div>
 
-        <div className='movie__info__line'>
+        <div data-testid="infoLine" className='movie__info__line'>
             <MdCategory className='detail__icon'/>
-            <div data-testid='infoGenre'>{chosenMovie?.genres.map(g => g[0].toUpperCase() + g.slice(1)).join(', ')}</div>
+            <div data-testid='infoGenres'>{chosenMovie?.genres.map(g => g[0].toUpperCase() + g.slice(1)).join(', ')}</div>
         </div>
     </div>
     );

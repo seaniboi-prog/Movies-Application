@@ -8,7 +8,7 @@ import { render, cleanup, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import renderer from 'react-test-renderer';
 
-describe('Movie Thumbnail Component Tests', () => {
+describe('Movie Details Component Tests', () => {
 
     const dummyMovie:Movie = {
         id: 1,
@@ -29,25 +29,31 @@ describe('Movie Thumbnail Component Tests', () => {
 
     afterEach(cleanup);
 
-    it("Renders Movie thumbnail correctly", () => {
+    it("Renders Movie Detail box correctly", () => {
         expect(screen.getByTestId('infoBox')).toBeInTheDocument();
     });
 
-    // it("Renders Movie image correctly", () => {
-    //     const imageElement:HTMLElement = screen.getByTestId('movieImage');
-    //     expect(imageElement).toBeInTheDocument();
-    //     expect(imageElement.getAttribute('alt')).toBe(dummyMovie.key);
-    //     expect(imageElement.getAttribute('src')).toBe("movie_images/"+dummyMovie.img);
-    // });
+    it("Renders Movie lines correctly", () => {
+        const lineElements:HTMLElement[] = screen.getAllByTestId('infoLine'); 
+        expect(lineElements).toHaveLength(4);
+    });
 
-    // it("Renders Movie title correctly", () => {
-    //     const titleElement:HTMLElement = screen.getByTestId('movieTitle');
-    //     expect(titleElement).toBeInTheDocument();
-    //     expect(titleElement).toHaveTextContent(dummyMovie.name);
-    // });
+    it("Renders Movie details correctly", () => {
+        const descElement:HTMLElement = screen.getByTestId('infoDesc');
+        expect(descElement).toBeInTheDocument();
+        expect(descElement).toHaveTextContent(dummyMovie.description);
 
-    // it("Matches Snapshot", () => {
-    //     const tree = renderer.create(<MovieDetails chosenMovie={dummyMovie}/>).toJSON();
-    //     expect(tree).toMatchSnapshot();
-    // })
+        const lengthElement:HTMLElement = screen.getByTestId('infoLength');
+        expect(lengthElement).toBeInTheDocument();
+        expect(lengthElement).toHaveTextContent(dummyMovie.length);
+
+        const genreElement:HTMLElement = screen.getByTestId('infoGenres');
+        expect(genreElement).toBeInTheDocument();
+        expect(genreElement).toHaveTextContent(dummyMovie.genres.map(g => g[0].toUpperCase() + g.slice(1)).join(', '));
+    });
+
+    it("Matches Snapshot", () => {
+        const tree = renderer.create(<MovieDetails chosenMovie={dummyMovie}/>).toJSON();
+        expect(tree).toMatchSnapshot();
+    })
 });

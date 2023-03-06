@@ -51,7 +51,7 @@ const MainPage:React.FC = () => {
 
 
     return (
-    <div>
+    <div data-testid='mainPage'>
         <NavigationBar>
             <Search query={query} setQuery={setQuery}/>
             <Filter filterQuery={filterQuery} setFilterQ={setFilterQ} genreTypes={genreTypes}/>

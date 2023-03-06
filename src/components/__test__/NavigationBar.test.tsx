@@ -7,7 +7,7 @@ import { render, cleanup, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'
 import renderer from 'react-test-renderer';
 
-describe('Search Component Tests', () => {
+describe('Navigation Bar Component Tests', () => {
 
     const title:string = "Movie Gallery";
 
@@ -19,7 +19,7 @@ describe('Search Component Tests', () => {
 
     afterEach(cleanup);
 
-    it("Renders Search Component correctly", () => {
+    it("Renders Navigation Bar Component correctly", () => {
         const navComponent:HTMLElement = screen.getByTestId('navigation');
         expect(navComponent).toBeInTheDocument();
     });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Search Component Tests Matches Snapshot 1`] = `
+exports[`Navigation Bar Component Tests Matches Snapshot 1`] = `
 <div
   className="navigation"
   data-testid="navigation"
