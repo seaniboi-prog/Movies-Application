@@ -3,7 +3,6 @@ import MovieList from '../components/MovieList';
 import Search from '../components/Search';
 import Filter from '../components/Filter';
 import { Movie } from '../models';
-// import jsonObject from '../data/movie.mock-data.json'
 import NavigationBar from '../components/NavigationBar';
 
 const MainPage:React.FC = () => {
@@ -53,8 +52,6 @@ const MainPage:React.FC = () => {
         else return search_q;
         
     }, [movies, query, filterQuery]);
-
-
 
     return (
     <div data-testid='mainPage'>
