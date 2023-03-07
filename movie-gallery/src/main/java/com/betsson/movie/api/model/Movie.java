@@ -1,17 +1,12 @@
 package com.betsson.movie.api.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Entity
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Employee {
-    @Id
+@Getter
+@Setter
+public class Movie {
     private int id;
     private String key;
     private String name;
