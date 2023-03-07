@@ -1,5 +1,3 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom'
 import MovieThumbnail from '../MovieThumbnail';
 import { Movie } from '../../models';
 

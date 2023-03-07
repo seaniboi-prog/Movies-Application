@@ -1,5 +1,3 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
 import Search from '../Search';
 
 import { render, cleanup, screen } from '@testing-library/react';

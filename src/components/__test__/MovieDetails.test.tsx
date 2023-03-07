@@ -1,5 +1,3 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom'
 import MovieDetails from '../MovieDetails'
 
 import { Movie } from '../../models';

@@ -1,5 +1,3 @@
-// import React from 'react'
-// import ReactDOM from 'react-dom'
 import Filter from '../Filter'
 
 import { render, cleanup, screen } from '@testing-library/react';
