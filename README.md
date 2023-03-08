@@ -1,4 +1,4 @@
-# Movie Gallery Application
+# Movie Gallery Application - Frontend Approach
 
 ## About the app
 
