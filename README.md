@@ -23,6 +23,10 @@ npm test
 
 ## How to build/run Fullstack app
 
+Make sure you are in master branch
+```
+git checkout master
+```
 #### Setup Backend
 Requirements:
 - maven version 3.9.0 with Java version 17
