@@ -54,7 +54,7 @@ const MovieDetails:React.FC<Props> = ({ chosenMovie } : Props) => {
             <p data-testid='infoDesc'>{chosenMovie?.description}</p>
         </div>
 
-        <div data-testid="infoLine" className='movie__info__line' id='movie__info_rating'>
+        <div data-testid="infoLine" className='movie__info__line' id='movie__info__rating'>
             {renderStars(chosenMovie?.rate)}
         </div>
 

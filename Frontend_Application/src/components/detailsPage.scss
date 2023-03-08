@@ -69,17 +69,11 @@
     color: chocolate;
 }
 
-.movie__info__rating {
-    // margin: 20px;
-    // margin-top: 30px;
+#movie__info__rating {
     margin-left: 80px;
-    // display: flex;
-    // transition: 0.5s;
-    // color: white;
 }
 
-.movie__info__rating:hover {
-    // transform: scale(1.05);
+#movie__info__rating:hover {
     color: gold;
 }
 
@@ -174,8 +168,6 @@ $large_thresh: 1500px;
     }
     .movie__info__box {
         border-radius: 10px;
-        // right: 20em;
-        // left: 6em;
         left: 0;
         position: relative;
         width: 70%;
