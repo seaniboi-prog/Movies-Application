@@ -18,7 +18,7 @@ exports[`Movie Details Component Tests Matches Snapshot 1`] = `
   <div
     className="movie__info__line"
     data-testid="infoLine"
-    id="movie__info_rating"
+    id="movie__info__rating"
   >
     <svg
       className="detail__icon"
