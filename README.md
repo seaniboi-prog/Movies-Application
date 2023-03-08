@@ -1,4 +1,4 @@
-# Movie Gallery Application
+# Movie Gallery Application - Fullstack Approach
 
 ## About the app
 
