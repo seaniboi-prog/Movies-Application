@@ -58,5 +58,5 @@ If you wish to try out the application with frontend only, do the following:
 git checkout frontend-approach
 cd Frontend_Application
 docker build -t movie/react-app .
-docker run -d -p 3000:3000 movie/react-app
+docker run -d -p 3000:3000 movie/frontend-react-app
 ```

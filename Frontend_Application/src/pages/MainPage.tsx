@@ -3,6 +3,7 @@ import MovieList from '../components/MovieList';
 import Search from '../components/Search';
 import Filter from '../components/Filter';
 import { Movie } from '../models';
+import jsonObject from '../data/movie.mock-data.json'
 import NavigationBar from '../components/NavigationBar';
 
 const MainPage:React.FC = () => {
@@ -10,22 +11,17 @@ const MainPage:React.FC = () => {
     const [filterQuery, setFilterQ] = useState<string>("all");
     const [movies, setMovies] = useState<Movie[]>([]);
 
-    const MOVIES_REST_API = 'http://localhost:8080/api/v1/movies'
+    // const MOVIES_REST_API = 'http://localhost:8080/api/v1/movies'
+
+    const loadJsonObjectAnother = (): Promise<Movie[]> => {
+        const hmm: Movie[] = jsonObject as Movie[];
+        return new Promise((res) => res(hmm));
+    };
 
     useEffect(() => {
-        fetch(MOVIES_REST_API, {
-            method: 'get',
-                headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json',
-                },
-                'credentials': 'same-origin'
+        loadJsonObjectAnother().then(res => {
+            setMovies(prev => [...res]);
         })
-            .then(response => response.json())
-            .then(responseData => setMovies(responseData))
-            .catch(ex => {
-                console.log('Respnse parsing failed. Error: ', ex);
-            })
     }, []);
 
     
