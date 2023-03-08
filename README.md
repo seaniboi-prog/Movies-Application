@@ -2,6 +2,18 @@
 
 ## About the app
 
+The app consists of two pages:
+- Main page
+- Details page
+
+#### Main Page
+In this page all the movies are listed next to each other. A search bar is provided in order to search any specific movie. Moreover, a dropdown menu next to the search bar is also given, which filters the given list depending on the genre selected.
+
+If a movie thumbnail is clicked, the application will redirect the user to the details page of that specific movie.
+
+#### Details Page
+This page consists of all the details of a chosen movie, these include the movie name, image, description, rating, genres and length. A home button is also provided in the navigation bar, to redirect the user back to the main page.
+
 ## Cloning the repo
 
 Run the following commands:
