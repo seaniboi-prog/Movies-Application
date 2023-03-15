@@ -29,9 +29,4 @@ public class MovieController {
     public Movie getMovie(@PathVariable int movieID){
         return movieService.getMovie(movieID);
     }
-
-    @GetMapping("/hey")
-    public String hello(){
-        return "Hello";
-    }
 }
